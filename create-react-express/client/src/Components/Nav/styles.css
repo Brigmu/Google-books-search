@@ -1,0 +1,16 @@
+.navbar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    min-height: 75px;
+    width: 100%;
+    background-color: rgba(68, 68, 255, 0.966);
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+}
