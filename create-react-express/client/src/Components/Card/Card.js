@@ -14,7 +14,7 @@ const Card = (props) => {
                 <a href={props.link}>Google books</a>
             </div>
             <div className='card-btn'>
-                <button onClick={props.handleSaveBtn} data-id={props.id}>Save</button>
+                <button onClick={props.handleFunction} data-id={props.id}>{props.btnText}</button>
             </div>
         </div>
     )

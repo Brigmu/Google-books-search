@@ -40,10 +40,12 @@ const Search = (props) => {
             title: searchedBooks[stateIndex].volumeInfo.title,
             authors: searchedBooks[stateIndex].volumeInfo.authors,
             description: searchedBooks[stateIndex].volumeInfo.description,
-            img: searchedBooks[stateIndex].volumeInfo.imageLinks.smallThumbnail,
+            image: searchedBooks[stateIndex].volumeInfo.imageLinks.smallThumbnail,
             link: searchedBooks[stateIndex].selfLink,
         }
         saveABook(newBook)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
     }
     return(
         <div>
@@ -61,7 +63,7 @@ const Search = (props) => {
                     <button onClick={handleSearch}>Search</button>
                 </form>
                 {searchedBooks.length !== 0 ? searchedBooks.map(book => (
-                    <Card handleSaveBtn={handleSaveBtn} id={book.id} title={book.volumeInfo.title} authors={book.volumeInfo.authors} img={book.volumeInfo.imageLinks.smallThumbnail} description={book.volumeInfo.description} link={book.selfLink}></Card>
+                    <Card handleFunction={handleSaveBtn} btnText={'Save'} id={book.id} title={book.volumeInfo.title} authors={book.volumeInfo.authors} img={book.volumeInfo.imageLinks.smallThumbnail} description={book.volumeInfo.description} link={book.selfLink}></Card>
                 )) : <> </>}
             </Container>
         </div>
