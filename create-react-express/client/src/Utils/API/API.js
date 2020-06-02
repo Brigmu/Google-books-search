@@ -13,5 +13,5 @@ export const removeSavedBook = (id) => {
 }
 
 export const searchGoogleBooks = (bookname) => {
-    return axios.get(``);
+    return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${bookname}`);
 }
